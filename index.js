@@ -11,6 +11,8 @@ const nemo = [
   "Papi",
 ];
 
+const largerArr = new Array(100).fill(nemo);
+
 const findNemo = (arr) => {
   // Measuring Performance
 
@@ -24,4 +26,4 @@ const findNemo = (arr) => {
   console.log(`Call to find nemo took ${t0 - t1} milliseconds`);
 };
 
-findNemo(nemo);
+findNemo(largerArr);
