@@ -1,6 +1,15 @@
 // Basic Reviews
 
-const nemo = ["nemo"];
+const nemo = [
+  "nemo",
+  "dory",
+  "Yeison",
+  "Enmanuel",
+  "Louders",
+  "Wilmin",
+  "Deivi",
+  "Papi",
+];
 
 const findNemo = (arr) => {
   // Measuring Performance
