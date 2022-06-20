@@ -27,3 +27,12 @@ const findNemo = (arr) => {
 };
 
 findNemo(largerArr);
+
+// Big O o(n) -- Linear time meaning the
+const boxe1 = [1, 2, 3, 4, 5, 6];
+
+// The entire funtion will run O(2), because Its handling two operations from the array.
+function logFirstTwoBoxes(boxes) {
+  console.log(boxes[0]); // O(1)
+  console.log(boxes[1]); // O(1)
+}
