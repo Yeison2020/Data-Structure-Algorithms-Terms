@@ -34,7 +34,45 @@ const arr2 = [4, 6, 30];
 
 function mergeSortedArray(arr1, arr2) {
   // Always check array length ,  typeof and If one array empty return first array sorted If not sorted already
+  if (arr1.length === 0) {
+    return arr2;
+  }
+
+  if (arr2.length === 0) {
+    return arr1;
+  }
   const allSortedArray = arr1.concat(arr2);
   allSortedArray.sort((a, b) => a - b);
   return allSortedArray;
+}
+
+// Version Two merging and sorting arrays
+
+function arrayValue(arr1, arr2) {
+  const mergeArray = [];
+  let array1Item = arr1[0];
+  let array2Item = arr2[0];
+  let i = 0;
+  let j = 1;
+  if (arr1.length === 0) {
+    return arr2;
+  }
+
+  if (arr2.length === 0) {
+    return arr1;
+  }
+
+  while (array1Item || array2Item) {
+    if (array1Item > array2Item) {
+      mergeArray.push(array1Item);
+      array1Item = arr1[i];
+      i++;
+    } else {
+      mergeArray.push(array2Item);
+      array2Item = arr2[j];
+      j++;
+    }
+  }
+
+  return mergeArray;
 }
