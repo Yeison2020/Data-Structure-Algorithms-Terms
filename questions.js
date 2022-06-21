@@ -26,3 +26,14 @@ function reverse2(str) {
 const reverse3 = (str) => str.split("").reverse().join("");
 
 const reverse4 = (string) => [...string].reverse().join("");
+
+/// Merging Sorted Array
+// Implementing a Merge and sort Array
+const arr1 = [0, 3, 4, 31];
+const arr2 = [4, 6, 30];
+
+function mergeSortedArray(arr1, arr2) {
+  const allSortedArray = arr1.concat(arr2);
+  allSortedArray.sort((a, b) => a - b);
+  return allSortedArray;
+}
