@@ -40,13 +40,17 @@ class myArray {
   }
 
   shiftItems(index) {
-    for (let i = index; i < globalThis.length - 1; i++) {
+    for (let i = index; i < this.length - 1; i++) {
       this.data[i] = this.data[i + 1];
     }
+
+    delete this.data[this.length - 1];
+    this.length--;
   }
 }
 
 const newArray = new myArray();
 newArray.push("Hello");
+newArray.delete();
 
 console.log(newArray);
