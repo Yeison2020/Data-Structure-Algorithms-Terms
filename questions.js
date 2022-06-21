@@ -33,6 +33,7 @@ const arr1 = [0, 3, 4, 31];
 const arr2 = [4, 6, 30];
 
 function mergeSortedArray(arr1, arr2) {
+  // Always check array length ,  typeof and If one array empty return first array sorted If not sorted already
   const allSortedArray = arr1.concat(arr2);
   allSortedArray.sort((a, b) => a - b);
   return allSortedArray;
