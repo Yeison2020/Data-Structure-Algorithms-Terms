@@ -18,3 +18,11 @@ function reverseSt(string) {
   console.log(backwards);
   return backwards.join("");
 }
+
+function reverse2(str) {
+  return str.split("").reverse().join("");
+}
+
+const reverse3 = (str) => str.split("").reverse().join("");
+
+const reverse4 = (string) => [...string].reverse().join("");
