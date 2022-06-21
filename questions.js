@@ -1,4 +1,6 @@
 const name = "nosiey";
+
+// FUNCTION SOLVED
 function reverseSt(string) {
   // Check array steps
 
@@ -7,7 +9,6 @@ function reverseSt(string) {
   if (!string || string.length < 2 || typeof string !== "string") {
     return "that no good";
   }
-
   // Creating constant to store Values;
   const backwards = [];
   const itemsTotal = string.length - 1;
@@ -17,5 +18,3 @@ function reverseSt(string) {
   console.log(backwards);
   return backwards.join("");
 }
-
-console.log(reverseSt(name));
