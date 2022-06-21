@@ -11,3 +11,17 @@ arr.splice(2, 0, "Alien");
 arr.console.log(arr);
 
 // Types of Array Statics and Dynamic
+
+class myArray {
+  constructor() {
+    this.length = 0;
+    this.data = {};
+  }
+
+  get(index) {
+    return this.data[index];
+  }
+}
+
+const newArray = new myArray();
+console.log(newArray);
