@@ -21,7 +21,14 @@ class myArray {
   get(index) {
     return this.data[index];
   }
+
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this.length;
+  }
 }
 
 const newArray = new myArray();
+newArray.push("Hello");
 console.log(newArray);
