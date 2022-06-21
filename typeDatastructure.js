@@ -27,8 +27,15 @@ class myArray {
     this.length++;
     return this.length;
   }
+
+  pop() {
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    return lastItem;
+  }
 }
 
 const newArray = new myArray();
 newArray.push("Hello");
+
 console.log(newArray);
