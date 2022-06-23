@@ -63,7 +63,7 @@ function arrayValue(arr1, arr2) {
   }
 
   while (array1Item || array2Item) {
-    if (array1Item > array2Item) {
+    if (!array2Item || array1Item > array2Item) {
       mergeArray.push(array1Item);
       array1Item = arr1[i];
       i++;
