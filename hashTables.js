@@ -19,7 +19,7 @@ class HashTable {
   constructor(size) {
     this.data = new Array(size);
   }
-
+  // Important Notes here: The _hash is creating the address where we can retrive the this.data that contains my key, values
   _hash(key) {
     let hash = 0;
     for (let i = 0; i < key.length; i++) {
@@ -34,6 +34,22 @@ class HashTable {
       this.data[address] = [];
       this.data[address].push([key, value]);
       console.log(this.data);
+    } else {
+      // Here We avoid the collition and the memory space will not be compromise
+      this.data[address].push([key, value]);
+    }
+  }
+  get(key) {
+    let address = this._hash(key);
+    const currentBucket = this.data[address];
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          return currentBucket[i][1];
+        }
+      }
+    } else {
+      return undefined;
     }
   }
 }
