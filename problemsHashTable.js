@@ -5,14 +5,14 @@
 const arr = [2, 5, 1, 2, 3, 5, 1, 2, 4];
 
 const findRepeatedNum = (arr) => {
-  if (arr.length < 2) {
-    return undefined;
-  }
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i + 1]) {
-      return arr[i];
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        return arr[i];
+      }
     }
   }
+  return undefined;
 };
 
 // Should return 2
